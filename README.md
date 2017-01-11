@@ -68,7 +68,7 @@ Now that we have our db we can use it to add a new plane:
 
 ```
 db.new_plane(function(err, planes){
-    console.log(err, "plane added")
+    console.log(err, "plane added");
 });
 ```
 
@@ -83,8 +83,8 @@ Do the same thing to get all planes using the get_planes file
 
 ```
 db.get_planes(function(err, planes){
-    console.log(err, planes)
-})
+    console.log(err, planes);
+});
 ```
 
 ## Queries in different files
@@ -120,9 +120,9 @@ module.exports = {
 
         db.get_planes(function(err, planes){
             console.log(err, planes);
-        })
+        });
     }
-}
+};
 ```
 
 __call our controller__
