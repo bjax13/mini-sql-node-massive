@@ -3,14 +3,13 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var massive = require('massive');
 
-var controller = require('./controller.js');
 
 var connectionString = "postgres://localhost/sandbox";
 var massiveInstance = massive.connectSync({connectionString : connectionString});
 
 var app = module.exports = express();
-
 app.set('db',massiveInstance);
+
 var db = app.get('db');
 
 // db.new_plane(function(err, planes){
@@ -21,6 +20,7 @@ var db = app.get('db');
 //     console.log(err, planes);
 // });
 
+var controller = require('./controller.js');
 
 
 controller.getPlanes();

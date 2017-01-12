@@ -24,6 +24,13 @@ Make a new database in postgres called sandbox
 
 Add a new table to that database ( [pgAdmin tutorial on how to do both of these](https://www.youtube.com/watch?v=1wvDVBjNDys) ) :
 
+* ID : Primary key number
+* Name : string
+* Description: string
+* Price: number
+* Imageurl : string
+
+
 ```
 CREATE TABLE airplanes (
   planeid SERIAL PRIMARY KEY NOT NULL, -- The primary key
@@ -35,7 +42,7 @@ CREATE TABLE airplanes (
 
 ## Connect with Massive to our database
 
-We need to get a copy of massive ot use.  We need : `connectionString > connection > db`
+We need to get a copy of massive to use.  We need : `connectionString > connection > db`
 
 Add a connection string under your call to require massive.  Change the part that says jeremyrobertson to have your user name.  (If you included password it will look like `username:password@localhost/sandbox`
 
