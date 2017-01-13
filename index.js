@@ -3,7 +3,6 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var massive = require('massive');
 
-
 var connectionString = "postgres://localhost/sandbox";
 var massiveInstance = massive.connectSync({connectionString : connectionString});
 
